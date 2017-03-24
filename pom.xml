@@ -70,7 +70,7 @@
     <scm>
         <url>https://${github.domain}/${github.user}/${project.artifactId}</url>
         <connection>scm:git:git://${github.domain}/${github.user}/${project.artifactId}.git</connection>
-        <developerConnection>scm:git:git@${github.domain}:${github.domain}/${github.user}/${project.artifactId}.git</developerConnection>
+        <developerConnection>scm:git:git@${github.domain}:${github.user}/${project.artifactId}.git</developerConnection>
         <tag>${github.tag}</tag>
     </scm>
 
