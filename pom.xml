@@ -46,6 +46,21 @@
         <github.tag>HEAD</github.tag>
         <github.pagesBranch>gh-pages</github.pagesBranch>
         <dep.maven>3.0.4</dep.maven>
+
+        <plugin.maven-release-plugin>2.5.3</plugin.maven-release-plugin>
+        <plugin.maven-clean-plugin>3.0.0</plugin.maven-clean-plugin>
+        <plugin.maven-compiler-plugin>3.6.1</plugin.maven-compiler-plugin>
+        <plugin.maven-jar-plugin>3.0.2</plugin.maven-jar-plugin>
+        <plugin.maven-install-plugin>2.5.2</plugin.maven-install-plugin>
+        <plugin.maven-deploy-plugin>2.8.2</plugin.maven-deploy-plugin>
+        <plugin.maven-gpg-plugin>1.6</plugin.maven-gpg-plugin>
+        <plugin.nexus-staging-maven-plugin>1.6.8</plugin.nexus-staging-maven-plugin>
+        <plugin.maven-javadoc-plugin>2.10.4</plugin.maven-javadoc-plugin>
+        <plugin.maven-project-info-reports-plugin>2.9</plugin.maven-project-info-reports-plugin>
+        <plugin.maven-resources-plugin>3.0.2</plugin.maven-resources-plugin>
+        <plugin.maven-site-plugin>3.6</plugin.maven-site-plugin>
+        <plugin.maven-source-plugin>3.0.1</plugin.maven-source-plugin>
+        <plugin.maven-surefire-plugin>2.19.1</plugin.maven-surefire-plugin>
     </properties>
 
     <prerequisites>
@@ -82,7 +97,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.3</version>
+                <version>${plugin.maven-compiler-plugin}</version>
                 <inherited>true</inherited>
                 <configuration>
                     <source>${maven.compiler.source}</source>
@@ -104,7 +119,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
-                <version>3.4</version>
+                <version>${plugin.maven-site-plugin}</version>
                 <inherited>true</inherited>
                 <dependencies>
                     <dependency>
@@ -123,7 +138,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.5.3</version>
+                <version>${plugin.maven-release-plugin}</version>
                 <inherited>true</inherited>
                 <configuration>
                     <arguments>-Dgpg.passphrase="${gpg.passphrase}"</arguments>
@@ -133,7 +148,7 @@
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.8</version>
+                <version>${plugin.nexus-staging-maven-plugin}</version>
                 <extensions>true</extensions>
                 <inherited>true</inherited>
                 <configuration>
@@ -145,7 +160,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
-                <version>1.6</version>
+                <version>${plugin.maven-gpg-plugin}</version>
                 <inherited>true</inherited>
                 <configuration>
                     <gpgArguments>
@@ -166,25 +181,25 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
-                <version>2.8.2</version>
+                <version>${plugin.maven-deploy-plugin}</version>
                 <inherited>true</inherited>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-install-plugin</artifactId>
-                <version>2.5.2</version>
+                <version>${plugin.maven-install-plugin}</version>
                 <inherited>true</inherited>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>2.6</version>
+                <version>${plugin.maven-jar-plugin}</version>
                 <inherited>true</inherited>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
-                <version>2.7</version>
+                <version>${plugin.maven-resources-plugin}</version>
                 <inherited>true</inherited>
                 <executions>
                     <execution>
@@ -197,7 +212,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>2.4</version>
+                <version>${plugin.maven-source-plugin}</version>
                 <inherited>true</inherited>
                 <executions>
                     <execution>
@@ -211,7 +226,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.10.3</version>
+                <version>${plugin.maven-javadoc-plugin}</version>
                 <inherited>true</inherited>
                 <executions>
                     <execution>
@@ -225,13 +240,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-clean-plugin</artifactId>
-                <version>2.6.1</version>
+                <version>${plugin.maven-clean-plugin}</version>
                 <inherited>true</inherited>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.19</version>
+                <version>${plugin.maven-surefire-plugin}</version>
                 <inherited>true</inherited>
                 <configuration>
                     <useSystemClassLoader>false</useSystemClassLoader>
@@ -241,7 +256,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>2.8.1</version>
+                <version>${plugin.maven-project-info-reports-plugin}</version>
                 <inherited>true</inherited>
                 <dependencies>
                     <dependency>
