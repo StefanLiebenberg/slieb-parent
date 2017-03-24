@@ -5,7 +5,7 @@
     <name>slieb</name>
     <groupId>org.slieb</groupId>
     <artifactId>slieb-parent</artifactId>
-    <version>1.1</version>
+    <version>1.2-SNAPSHOT</version>
     <packaging>pom</packaging>
     <description>The parent for all org.slieb.* packages. To make configuration easier.</description>
     <url>https://stefanliebenberg.github.io/slieb-parent</url>
@@ -69,7 +69,7 @@
         <url>https://${github.domain}/${github.user}/${project.artifactId}</url>
         <connection>scm:git:git://${github.domain}/${github.user}/${project.artifactId}.git</connection>
         <developerConnection>scm:git:git@${github.domain}:${github.user}/${project.artifactId}.git</developerConnection>
-        <tag>slieb-parent-1.1</tag>
+        <tag>${github.tag}</tag>
     </scm>
 
     <distributionManagement>
