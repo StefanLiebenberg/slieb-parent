@@ -44,7 +44,8 @@
         <github.domain>github.com</github.domain>
         <github.user>StefanLiebenberg</github.user>
         <github.tag>HEAD</github.tag>
-        <dep.maven>3.3.5</dep.maven>
+        <github.pagesBranch>gh-pages</github.pagesBranch>
+        <dep.maven>3.0.4</dep.maven>
     </properties>
 
     <prerequisites>
@@ -62,10 +63,10 @@
         <site>
             <id>github</id>
             <name>Deployment through GitHub's site deployment plugin</name>
-            <url>git:ssh://git@${github.domain}/${github.user}/${project.artifactId}.git?gh-pages#</url>
+            <url>git:ssh://git@${github.domain}/${github.user}/${project.artifactId}.git?{github.pagesBranch}#</url>
         </site>
         <snapshotRepository>
-            <id>ossrh</id>
+            <id>ossrh-snapshots</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
         <repository>
@@ -132,7 +133,7 @@
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.6</version>
+                <version>1.6.8</version>
                 <extensions>true</extensions>
                 <inherited>true</inherited>
                 <configuration>
